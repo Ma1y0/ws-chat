@@ -31,11 +31,12 @@ const App: Component = () => {
     }
 
     server.addEventListener("message", (event) => {
-        setMessages([JSON.parse(event.data), ...messages()])
+        setMessages([JSON.parse(event.data), ...messages()]);
+        window.scrollTo(0, document.body.scrollHeight);
     })
 
     return (
-        <main class="w-full h-screen pt-2">
+        <main class="w-full h-full pt-2 mb-24">
             <For each={messages().sort((a, b) => a.date - b.date)}>
                 {(message: IMessage) => (
                     <div class={userName() == message.sender ? "chat chat-end" : "chat chat-start"}>
