@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+    "lib": ["es2024", "dom"],
+    "target": "es2024",
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+}
